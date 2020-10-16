@@ -1,4 +1,4 @@
-
+/*
 #include <iostream>
 #include <thread>
 #include <chrono>
@@ -75,3 +75,5 @@ int main()
     system("pause");
     return 0;
 }
+
+*/

@@ -1,5 +1,4 @@
-#ifndef NETCOM_H
-#define NETCOM_H
+#pragma once
 
 #include <iostream>
 #include <memory>
@@ -20,7 +19,3 @@
 #include <asio.hpp>
 #include <asio/ts/buffer.hpp>
 #include <asio/ts/internet.hpp>
-
-
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef NETMSG_H
-#define NETMSG_H
+#pragma once
 
 namespace sfv
 {
@@ -57,7 +56,23 @@ namespace sfv
                 return msg;                                                                   //Return the msg so it can be chained
             }
         };
+
+        template <typename T>
+        class Connection;
+
+        template <typename T>
+        struct owned_message
+        {
+            std::shared_ptr<Connection<T>> remote = nullptr;
+            message<T> msg;
+
+            //Friendly string maker
+            friend std::ostream &operator<<(std::ostream &os, const owned_message<T> &msg)
+            {
+                os << msg.msg;
+                return os;
+            }
+        };
+
     } // namespace net
 } // namespace sfv
-
-#endif

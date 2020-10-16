@@ -28,6 +28,7 @@ int main()
 
     msg >> d >> c >> b >> a;
 
+    std::cout << msg << std::endl;
     std::cout << a << " " << b << " " << c << std::endl;
     return 0;
 }
