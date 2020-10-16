@@ -3,12 +3,14 @@ set (CMAKE_CXX_STANDARD 14)
 
 project(mmo_network)
 
-set(src
-    src/main.cpp
+file(GLOB_RECURSE src
+    #src/*.cpp
+    test/*.cpp
+    include/*.hpp
 )
 
 include_directories(
-    include
+    ${PROJECT_SOURCE_DIR}/include/
     C:/asio-1.18.0/include/
 )
 
